@@ -1,0 +1,49 @@
+
+var roster = ["Babe", "John", "Porter", "Ricky", "Arnez"];
+
+// Display Team
+function disTeam(){
+console.log(roster);
+}
+
+// Add name
+function addName(name){
+name = prompt("What name do you want to add?");
+roster.push(name);
+console.log(roster);
+}
+
+// Remove name
+function removeName(name){
+name = prompt("What name do you want to remove?");
+roster.pop(name);
+console.log(roster);
+}
+
+// Menu
+function menuList() {
+console.log("1. Display Team.");
+console.log("2. Add Player.");
+console.log("3. Remove Player.");
+console.log("4. Quit.");
+}
+// Extra menu
+menuList();
+let numberPick = prompt("Pick a number from the list.");
+switch(numberPick) {
+  case "1":
+    disTeam();
+    break;
+  case "2":
+    addName();
+    break;
+  case "3":
+    removeName();
+    break;
+  case "4":
+    close();
+    break;
+  default:
+    console.log("That is not a chooseable number.");
+    break;
+}
